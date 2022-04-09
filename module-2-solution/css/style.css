@@ -1,71 +1,74 @@
-body {
-  margin: 0px;
-  width: 100%;
+* {
   box-sizing: border-box;
-  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-  width: 100px;
-  box-sizing: border-box;
-  border: 1px black solid;
-  margin: 0;
-  padding: 5px;
+  margin: 30px;
+  text-align: center;
   font-family: "Helvetica Neue", Helvetica;
-  background-color: pink !important;
   font-size: 175%;
 }
-.dishname {
+
+h2 {
+  width: 100px;
   float: right;
+  text-align: center;
+  border: 1px black solid;
+  padding: 5px;
+  font-family: "Helvetica Neue", Helvetica;
+  font-size: 125%;
+}
+#soup {
+  background-color: pink;
+}
+#sushi {
+  background-color: green;
+}
+#pasta {
+  background-color: purple;
 }
 .content {
   clear: both;
-  margin: 0;
   padding: 10px;
-  font-size: 125%;
   font-family: "Helvetica Neue", Helvetica;
-}
-.container {
-  box-sizing: border-box;
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
 }
 
 .row {
-  box-sizing: border-box;
-  float: right;
-  width: 100%;
-  margin: 0;
+  padding-right: -50px;
 }
 
 .dish {
-  box-sizing: border-box;
   float: left;
-  margin-left: 15px;
-  margin-bottom: 15px;
+  margin: 0 0 15px 15px;
   border: 1px black solid;
   background-color: grey;
 }
 
 /*Phone view*/
 @media (max-width: 767px) {
-  .dish-sm {
-    width: 100%;
+  .dish {
+    float: left;
+    width: calc(100% - 20px);
   }
 }
 
 /*Tablet view*/
-@media (min-width: 768px), (max-width: 991px) {
-  .dish-md {
-    width: 50%;
+@media (min-width: 768px) and (max-width: 991px) {
+  .dish {
+    float: left;
+    width: calc(50% - 20px);
+  }
+  .dish:nth-child(3) {
+    width: calc(100% - 25px);
   }
 }
 
 /*Desktop view*/
 @media (min-width: 991px) {
-  .dish-lg {
-    box-sizing: border-box;
-    width: 33%;
+  .dish {
+    width: calc(33.33% - 20px);
+    float: left;
   }
 }
